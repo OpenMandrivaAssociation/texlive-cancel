@@ -1,3 +1,9 @@
+# revision 17124
+# category Package
+# catalog-ctan /macros/latex/contrib/cancel
+# catalog-date 2010-02-23 16:16:11 +0100
+# catalog-license pd
+# catalog-version 2.0
 Name:		texlive-cancel
 Version:	2.0
 Release:	1
@@ -39,6 +45,7 @@ parts of maths formulae.
 %{_texmfdistdir}/tex/latex/cancel/cancel.sty
 %doc %{_texmfdistdir}/doc/latex/cancel/cancel.pdf
 %doc %{_texmfdistdir}/doc/latex/cancel/cancel.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,3 +56,5 @@ parts of maths formulae.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
