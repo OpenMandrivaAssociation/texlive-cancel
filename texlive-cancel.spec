@@ -1,12 +1,12 @@
-# revision 17124
+# revision 32508
 # category Package
 # catalog-ctan /macros/latex/contrib/cancel
-# catalog-date 2010-02-23 16:16:11 +0100
+# catalog-date 2013-12-30 10:37:07 +0100
 # catalog-license pd
-# catalog-version 2.0
+# catalog-version 2.2
 Name:		texlive-cancel
-Version:	2.0
-Release:	6
+Version:	2.2
+Release:	1
 Summary:	Place lines through maths formulae
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cancel
@@ -46,18 +46,3 @@ parts of maths formulae.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 749968
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 718000
-- texlive-cancel
-- texlive-cancel
-- texlive-cancel
-- texlive-cancel
-- texlive-cancel
-
