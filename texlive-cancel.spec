@@ -6,7 +6,7 @@
 # catalog-version 2.2
 Name:		texlive-cancel
 Version:	2.2
-Release:	1
+Release:	2
 Summary:	Place lines through maths formulae
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cancel
