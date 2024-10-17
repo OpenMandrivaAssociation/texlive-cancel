@@ -3,7 +3,7 @@ Version:	32508
 Release:	2
 Summary:	Place lines through maths formulae
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cancel
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cancel
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.doc.r%{version}.tar.xz
