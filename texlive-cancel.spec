@@ -1,42 +1,23 @@
-Name:		texlive-cancel
-Version:	32508
-Release:	2
+%global tl_name cancel
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.2
+Release:	%{tl_revision}.1
 Summary:	Place lines through maths formulae
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cancel
-License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.doc.r%{version}.tar.xz
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/cancel.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A package to draw diagonal lines ("cancelling" a term) and
-arrows with limits (cancelling a term "to a value") through
-parts of maths formulae.
+A package to draw diagonal lines ("cancelling" a term) and arrows with
+limits (cancelling a term "to a value") through parts of maths formulae.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/cancel/cancel.sty
-%doc %{_texmfdistdir}/doc/latex/cancel/cancel.pdf
-%doc %{_texmfdistdir}/doc/latex/cancel/cancel.tex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
